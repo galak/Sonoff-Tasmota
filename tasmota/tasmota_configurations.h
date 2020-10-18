@@ -811,4 +811,33 @@
 #include "tasmota_configurations_ESP32.h"
 #endif  // ESP32
 
+#undef USE_EMULATION_HUE                         // Disable Hue Bridge emulation for Alexa (+14k code, +2k mem common)
+#undef USE_EMULATION_WEMO                        // Disable Belkin WeMo emulation for Alexa (+6k code, +2k mem common)
+#undef USE_DOMOTICZ                              // Disable Domoticz
+#undef USE_I2C                                   // Disable all I2C sensors
+#undef USE_SPI                                   // Disable all SPI devices
+#undef USE_MCP39F501                           // Disable MCP39F501 Energy monitor as used in Shelly 2
+#undef USE_DS18x20                               // Disable DS18x20 sensor
+#undef USE_MAX31855                              // Disable MAX31855 K-Type thermocouple sensor using softSPI
+#undef USE_SONOFF_L1                             // Disable support for Sonoff L1 led control
+#undef USE_SONOFF_RF                             // Disable support for Sonoff Rf Bridge (+3k2 code)
+#undef USE_SONOFF_SC                             // Disable support for Sonoff Sc (+1k1 code)
+#undef USE_RF_FLASH                            // Disable support for flashing the EFM8BB1 chip on the Sonoff RF Bridge. C2CK must be connected to GPIO4, C2D to GPIO5 on the PCB
+#undef USE_SONOFF_IFAN                          // Disable support for Sonoff iFan02 and iFan03 (+2k code)
+#undef USE_TUYA_MCU                              // Disable support for Tuya Serial MCU
+#undef USE_ARMTRONIX_DIMMERS                     // Disable support for Armtronix Dimmers (+1k4 code)
+#undef USE_PS_16_DZ                              // Disable support for PS-16-DZ Dimmer and Sonoff L1 (+2k code)
+#undef USE_SONOFF_IFAN                           // Disable support for Sonoff iFan02 and iFan03 (+2k code)
+#undef USE_BUZZER                                // Disable support for a buzzer (+0k6 code)
+#undef USE_ARILUX_RF                             // Disable support for Arilux RF remote controller
+#undef USE_EXS_DIMMER                            // Disable support for EX-Store WiFi Dimmer
+#undef USE_HOTPLUG                               // Disable support for HotPlug
+#undef USE_SHUTTER                               // Disable Shutter support for up to 4 shutter with different motortypes (+6k code)
+#undef USE_KEELOQ                                // Disable support for Jarolift rollers by Keeloq algorithm (+4k5 code)
+#undef USE_SONOFF_D1                             // Disable support for Sonoff D1 Dimmer (+0k7 code)
+#define USE_COUNTER                              // Enable counters
+#define USE_PWM_DIMMER                           // Disable support for MJ-SD01/acenx/NTONPOWER PWM dimmers (+4k5 code)
+#undef ROTARY_V1
+
+
 #endif  // _TASMOTA_CONFIGURATIONS_H_

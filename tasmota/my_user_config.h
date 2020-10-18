@@ -846,4 +846,6 @@
   #endif
 #endif
 
+#define USE_HAIKU_FAN
+
 #endif  // _MY_USER_CONFIG_H_
