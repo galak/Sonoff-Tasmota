@@ -600,9 +600,14 @@ struct {
   uint8_t       zb_txradio_dbm;            // F33
   uint16_t      pms_wake_interval;         // F34
   uint8_t       config_version;            // F36
+#ifdef USE_HAIKU_FAN
+  uint8_t       haiku_type;                // F37
+  uint32_t      haiku_ip_address;          // F38
+#else
   uint8_t       windmeter_pulses_x_rot;    // F37
   uint16_t      windmeter_radius;          // F38
   uint16_t      windmeter_pulse_debounce;  // F3A
+#endif
   int16_t       windmeter_speed_factor;    // F3C
   uint8_t       windmeter_tele_pchange;    // F3E
   uint8_t       ledpwm_on;                 // F3F

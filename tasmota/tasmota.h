@@ -362,4 +362,12 @@ enum TuyaSupportedFunctions { TUYA_MCU_FUNC_NONE, TUYA_MCU_FUNC_SWT1 = 1, TUYA_M
                               TUYA_MCU_FUNC_MOTOR_DIR = 97, TUYA_MCU_FUNC_ERROR = 98 , TUYA_MCU_FUNC_DUMMY = 99, TUYA_MCU_FUNC_LAST = 255
 };
 
+enum haikuType { HAIKU_FAN, HAIKU_LIGHT };
+enum haikuCmdType {
+	HAIKU_CMD_ON,
+	HAIKU_CMD_OFF,
+	HAIKU_CMD_LEVEL
+};
+
+
 #endif  // _TASMOTA_H_
